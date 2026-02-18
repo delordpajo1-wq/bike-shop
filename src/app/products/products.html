@@ -1,0 +1,20 @@
+<section class="filter-section">
+  <button (click)="selectedCategory='All'">All</button>
+  <button (click)="selectedCategory='Mountain'">Mountain</button>
+  <button (click)="selectedCategory='BMX'">BMX</button>
+  <button (click)="selectedCategory='Road'">Road</button>
+  <button (click)="selectedCategory='Electric'">Electric</button>
+</section>
+
+<div class="products-container">
+
+  <div class="card" *ngFor="let product of filteredProducts">
+    <img [src]="product.image" alt="bike">
+
+    <h3>{{ product.name }}</h3>
+    <p class="price">${{ product.price }}</p>
+
+    <button (click)="addToCart(product)">Add to Cart</button>
+  </div>
+
+</div>

@@ -1,0 +1,10 @@
+<nav class="navbar">
+  <h2>🚴 BikeZone</h2>
+
+  <div class="cart-box">
+    🛒 {{ cartCount }} Items |
+    💰 ${{ totalPrice }}
+  </div>
+</nav>
+
+<app-products (addProduct)="handleAdd($event)"></app-products>
